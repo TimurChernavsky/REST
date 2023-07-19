@@ -13,13 +13,6 @@ import java.util.List;
 
 @Repository
 public class UserRepository {
-    UserRepository userRepository;
-
-    public UserRepository(UserRepository userRepository) {
-        this.userRepository = userRepository;
-    }
-
-
     @Bean
     public List<Authorities> getUserAuthorities(@RequestParam String user, @RequestParam String password) {
         List<Authorities> list = new ArrayList<>();
